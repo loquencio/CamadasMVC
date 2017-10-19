@@ -1,0 +1,54 @@
+﻿@using CamadaDeApresentacao.Models
+@model Aluno
+
+@{
+    ViewBag.Title = "Editar";
+}
+
+<h2>Editar</h2>
+
+@using (Html.BeginForm("Editar", "Aluno")) {
+
+    @*
+        Maneira "tradicional", sem muito controle sobre o que é inputado.
+    @Html.Hidden("AlunoID")
+
+    @Html.Label("Nome")
+    @Html.TextBox("Nome", Model.Nome)
+    
+    <br />
+
+    @Html.Label("Email")
+    @Html.TextBox("Email", Model.Email)*@
+
+    @*
+        usando o htmlhelper fortemente tipado
+    @Html.HiddenFor(x => x.AlunoID)
+
+    <br />
+   
+    @Html.LabelFor(x => x.Nome)
+    @Html.TextBoxFor(x => x.Nome)
+
+    <br />
+
+    @Html.LabelFor(x => x.Email)
+    @Html.TextBoxFor(x => x.Email)*@
+
+    //utilizando o EditorFor que, a partir de Annotations contidas nas classes de Modelo, configuram os inputs
+    @*@Html.EditorFor(x => x.AlunoID);
+
+    @Html.LabelFor(x => x.Nome);
+    @Html.EditorFor(x => x.Nome);
+
+    <br />
+
+    @Html.LabelFor(x => x.Email);
+    @Html.EditorFor(x => x.Email);*@
+
+    //utilizando EditorForModel (mesma coisa que EditorFor, só que muito mais fácil)
+    @Html.EditorForModel()
+
+    <input type="submit" value="Salvar" />
+}
+

@@ -1,0 +1,30 @@
+﻿@using CamadaDeApresentacao.Models
+@model Aluno
+
+@{
+    Layout = null;
+    ViewBag.Title = "Detalhes";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Detalhes</title>
+</head>
+<body>
+    <div>
+        <h2>
+            Detalhes
+        </h2>
+        <p>AlunoID: @Model.AlunoID</p>
+        <p>
+            Nome: @Model.Nome
+        </p>
+        <p>
+            Email: @Model.Email
+        </p>
+    </div>
+</body>
+</html>

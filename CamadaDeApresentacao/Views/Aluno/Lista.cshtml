@@ -1,0 +1,36 @@
+﻿@using CamadaDeApresentacao.Models
+@model ICollection<Aluno>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Lista</title>
+</head>
+<body>
+    <div> 
+        <h2>
+            Tabela de Alunos
+        </h2>
+        <table>
+            <tr>
+                <th>AlunoID</th>
+                <th>Nome</th>
+                <th>E-mail</th>
+            </tr>
+            @foreach (var aluno in Model)
+            {
+                <tr>
+                    <td>@aluno.AlunoID</td>
+                    <td>@aluno.Nome</td>
+                    <td>@aluno.Email</td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>
