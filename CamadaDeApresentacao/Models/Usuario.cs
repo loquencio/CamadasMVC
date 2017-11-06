@@ -15,8 +15,8 @@ namespace CamadaDeApresentacao.Models
         [Display(Name = "Nome do Usuário")]
         public string Nome { get; set; }
 
-        //[RegularExpression(@"^.+@.+\..+$", ErrorMessage = "E-mail inválido!")]
-        [DataType(DataType.EmailAddress)]
+       // [DataType(DataType.EmailAddress)]
+        [RegularExpression(@"^.+@.+\..+$", ErrorMessage = "E-mail inválido!")]
         public string Email { get; set; }
 
         [DataType(DataType.Password)]
@@ -26,7 +26,7 @@ namespace CamadaDeApresentacao.Models
         public string Descricao { get; set; }
 
         [DataType(DataType.DateTime)]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd-MM-yyyy}")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime Cadastro { get; set; }
     }
 }

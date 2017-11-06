@@ -1,8 +1,14 @@
 ﻿@using CamadaDeApresentacao.Models
 @model ICollection<Aluno>
 @{
-    Layout = null;
+    ViewBag.Title = "Alunos";
+    Layout = "~/Views/Shared/K19Layout.cshtml";
 }
+
+@section Toolbar{
+    <input type="search" placeholder="Digite o nome do aluno" />
+    <input type="button" value="Buscar" />
+    }
 
 <!DOCTYPE html>
 

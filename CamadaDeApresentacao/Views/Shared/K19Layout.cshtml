@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div id="toolbar">
+        @if (IsSectionDefined("Toolbar"))
+        {
+            @RenderSection("Toolbar", false)
+        }
+        else
+        {
+            <input type="button"
+                   value="Veja o seu número da sorte"
+                   onclick="location.href='/Sorte/Index'" />
+        }
+    </div>
+    <section id="main">
+        @RenderBody()
+    </section>
+
+    <footer>&copy;Felipe Treinamentos</footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", false)
+</body>
+</html>

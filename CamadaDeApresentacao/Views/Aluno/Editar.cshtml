@@ -5,6 +5,9 @@
     ViewBag.Title = "Editar";
 }
 
+@section Toolbar{
+    <input type="button" value="Remover este cadastro" />
+}
 <h2>Editar</h2>
 
 @using (Html.BeginForm("Editar", "Aluno")) {
